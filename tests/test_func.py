@@ -16,14 +16,14 @@ def mock_function(a: str, b: int, c: str) -> str:
 
 class MockArgSchemaParser(ArgSchemaParser):
     @classmethod
-    def can_parse(cls, annotation):
+    def can_parse(cls, annotation):  # type: ignore
         return True
 
     def parse_value(self, value):
         return value
 
     @property
-    def argument_schema(self):
+    def argument_schema(self):  # type: ignore
         return {"type": "string"}
 
 

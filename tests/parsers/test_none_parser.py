@@ -5,7 +5,7 @@ from toolcore.func import BrokenSchemaError
 
 @pytest.fixture
 def none_parser():
-    return NoneParser(argtype=None, rec_parsers=[])
+    return NoneParser(argtype=None, rec_parsers=[])  # type: ignore
 
 
 def test_returns_none_for_none_input(none_parser):
