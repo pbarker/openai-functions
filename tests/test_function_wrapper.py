@@ -6,14 +6,13 @@ from typing import Dict, List, Union
 
 import pytest
 
-from openai_functions import BrokenSchemaError, CannotParseTypeError, FunctionWrapper
+from toolcore import BrokenSchemaError, CannotParseTypeError, FunctionWrapper
 
 
 def test_function_schema_generation_empty():
     """Test that the empty function schema is generated correctly."""
 
-    def test_function():
-        ...
+    def test_function(): ...
 
     function_wrapper = FunctionWrapper(test_function)
     function_schema = function_wrapper.schema
@@ -356,7 +355,7 @@ def test_dictionary():
     }
     function_wrapper({"container": {"item": 1, "priority": 2}})
     with pytest.raises(BrokenSchemaError):
-        function_wrapper({"container": [(1, 2), (3, 4)]})
+        function_wrapper({"container": [(1, 2), (3, 4)]})  # type: ignore
 
 
 def test_array():
