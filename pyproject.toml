@@ -1,18 +1,17 @@
 [tool.poetry]
-name = "openai-functions"
-version = "1.0.2"
-description = "Simplifies the usage of OpenAI ChatGPT's function calling by generating the schemas and parsing OpenAI's responses for you."
-authors = ["rizerphe <44440399+rizerphe@users.noreply.github.com>"]
+name = "toolcore"
+version = "0.1.0"
+description = "Core utilities for AI agent tools"
+authors = ["pbarker <patrickbarkerco@gmail.com>"]
 readme = "README.md"
-homepage = "https://github.com/rizerphe/openai-functions"
-documentation = "https://openai-functions.readthedocs.io/"
-keywords = ["nlp", "openai", "openai-api", "chatgpt", "chatgpt-api", "wrapper", "functions", "chatgpt-api", "openai-functions", "chatgpt-functions", "typing", "docstring", "docstrings", "decorators", "signatures", "parsing"]
+homepage = "https://github.com/pbarker/toolcore"
+documentation = "https://github.com/pbarker/toolcore"
+keywords = ["llm", "ai", "agents"]
 license = "MIT"
-packages = [{include = "openai_functions"}]
+packages = [{include = "toolcore"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-openai = "^0.27.8"
 docstring-parser = "^0.15"
 typing-extensions = "^4.6.3"
 

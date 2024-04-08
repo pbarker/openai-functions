@@ -1,4 +1,5 @@
 """Wrap a function for jsonschema io."""
+
 from __future__ import annotations
 from dataclasses import dataclass
 import inspect
@@ -6,11 +7,11 @@ from typing import Any, Callable, OrderedDict, TYPE_CHECKING, Type
 
 from docstring_parser import Docstring, parse
 
-from ..exceptions import BrokenSchemaError, CannotParseTypeError
-from ..parsers import ArgSchemaParser, defargparsers
+from .exceptions import BrokenSchemaError, CannotParseTypeError
+from .parsers import ArgSchemaParser, defargparsers
 
 if TYPE_CHECKING:
-    from ..json_type import JsonType
+    from .json_type import JsonType
 
 
 @dataclass
